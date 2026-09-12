@@ -107,7 +107,7 @@ const galleryItems = [
   { image: bobImage, title: "The modern bob", detail: "Cut by Julian", alt: "Before and after precision bob haircut transformation" },
   { image: treatmentImage, title: "The scalp ritual", detail: "Treatment by Sofia", alt: "Client enjoying a luxury scalp treatment" },
   { image: manicureImage, title: "Quiet luxury", detail: "Signature manicure", alt: "Neutral luxury manicure treatment" },
-];
+] as const;
 
 const reviews = [
   { quote: "From the consultation to the final reveal, I felt completely understood. My color has never looked this luminous.", name: "Olivia M.", source: "Google review" },
@@ -366,7 +366,7 @@ function Index() {
         </div>
         <div className="section-shell mt-12">
           <div className="relative grid min-h-56 place-items-center overflow-hidden border border-hero-foreground/15 bg-hero-surface text-center">
-            <div className="absolute inset-0 opacity-25" style={{ backgroundImage: "linear-gradient(var(--hero-foreground) 1px, transparent 1px), linear-gradient(90deg, var(--hero-foreground) 1px, transparent 1px)", backgroundSize: "42px 42px" }} />
+            <div className="map-grid absolute inset-0 opacity-25" />
             <div className="relative"><MapPin className="mx-auto size-7 text-champagne" /><p className="mt-3 font-display text-2xl">SoHo, New York</p><a href="https://maps.google.com/?q=128+Mercer+Street+New+York" target="_blank" rel="noreferrer" className="mt-2 inline-block text-xs uppercase tracking-[0.12em] text-champagne hover:underline">Open in maps</a></div>
           </div>
         </div>

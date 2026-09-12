@@ -192,6 +192,13 @@
   border-color: color-mix(in oklab, var(--color-foreground) 14%, transparent);
 }
 
+@utility map-grid {
+  background-image:
+    linear-gradient(var(--hero-foreground) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hero-foreground) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
