@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -121,6 +121,7 @@ function Index() {
   const [galleryIndex, setGalleryIndex] = useState(0);
   const [bookingOpen, setBookingOpen] = useState(false);
   const [preferredStylist, setPreferredStylist] = useState("");
+  const galleryItem = galleryItems[galleryIndex] ?? galleryItems[0];
 
   const openBooking = (stylist = "") => {
     setPreferredStylist(stylist);
@@ -313,10 +314,10 @@ function Index() {
               </div>
             </div>
             <div className="relative overflow-hidden bg-warm">
-              <img src={galleryItems[galleryIndex].image} width={1400} height={900} loading="lazy" alt={galleryItems[galleryIndex].alt} className="aspect-[14/9] w-full object-cover" />
+              <img src={galleryItem.image} width={1400} height={900} loading="lazy" alt={galleryItem.alt} className="aspect-[14/9] w-full object-cover" />
               <div className="absolute bottom-0 left-0 bg-charcoal px-6 py-4 text-hero-foreground sm:px-8">
-                <p className="font-display text-xl">{galleryItems[galleryIndex].title}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.12em] text-champagne">{galleryItems[galleryIndex].detail}</p>
+                <p className="font-display text-xl">{galleryItem.title}</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.12em] text-champagne">{galleryItem.detail}</p>
               </div>
             </div>
           </div>
@@ -418,7 +419,7 @@ function BookingForm({ onSubmit, preferredStylist }: { onSubmit: (event: FormEve
   );
 }
 
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
+function Field({ label, children }: { label: string; children: ReactNode }) {
   return <label className="grid gap-2 text-xs font-semibold uppercase tracking-[0.1em] text-muted-foreground"><span>{label}</span>{children}</label>;
 }
 
