@@ -314,7 +314,7 @@ function Index() {
               </div>
             </div>
             <div className="relative overflow-hidden bg-warm">
-              <img src={galleryItem.image} width={1400} height={900} loading="lazy" alt={galleryItem.alt} className="aspect-[14/9] w-full object-cover" />
+              <img src={galleryItem.image} width={1408} height={912} loading="lazy" alt={galleryItem.alt} className="aspect-[14/9] w-full object-cover" />
               <div className="absolute bottom-0 left-0 bg-charcoal px-6 py-4 text-hero-foreground sm:px-8">
                 <p className="font-display text-xl">{galleryItem.title}</p>
                 <p className="mt-1 text-xs uppercase tracking-[0.12em] text-champagne">{galleryItem.detail}</p>
