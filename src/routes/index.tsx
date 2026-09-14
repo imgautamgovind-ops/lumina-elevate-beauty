@@ -210,7 +210,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="about" className="bg-cream py-20 sm:py-28">
+      <section id="about" className="bg-muted py-20 sm:py-28">
         <div className="section-shell grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-24">
           <div>
             <p className="eyebrow">The Lumina philosophy</p>
@@ -300,7 +300,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="gallery" className="bg-cream py-20 sm:py-28">
+      <section id="gallery" className="bg-card py-20 sm:py-28">
         <div className="section-shell">
           <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
             <div>
@@ -359,7 +359,7 @@ function Index() {
               <Button variant="hero-outline" size="icon" aria-label="Facebook"><Facebook /></Button>
             </div>
           </div>
-          <div className="bg-cream p-6 text-foreground sm:p-10">
+          <div className="bg-card p-6 text-card-foreground sm:p-10">
             <div className="flex items-center gap-3 text-primary"><Sparkles className="size-5" /><span className="text-xs font-semibold uppercase tracking-[0.15em]">Appointment request</span></div>
             <BookingForm onSubmit={submitBooking} preferredStylist={preferredStylist} />
           </div>
@@ -372,7 +372,7 @@ function Index() {
         </div>
       </section>
 
-      <footer className="bg-cream py-14">
+      <footer className="bg-card py-14">
         <div className="section-shell">
           <div className="grid gap-10 border-b hairline pb-10 md:grid-cols-[1fr_auto_auto] md:gap-16">
             <div className="max-w-sm">
@@ -388,7 +388,7 @@ function Index() {
       </footer>
 
       <Dialog open={bookingOpen} onOpenChange={setBookingOpen}>
-        <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto bg-cream p-6 sm:p-10">
+        <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto bg-card p-6 sm:p-10">
           <DialogHeader>
             <p className="eyebrow">Your Lumina visit</p>
             <DialogTitle className="font-display text-3xl font-normal sm:text-4xl">Request an appointment</DialogTitle>
